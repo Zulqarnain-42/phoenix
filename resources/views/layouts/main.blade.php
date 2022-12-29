@@ -56,9 +56,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/" >Home</a></li>
                     <li><a href="{{route('services')}}">Services</a></li>
-                    <li><a href="/">Works</a></li>
                     <li><a href="{{route('about')}}">About</a></li>
-                    <li><a href="blog-main.html">News</a></li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
                 </ul>
             </div>
@@ -68,9 +66,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="/" >Home</a></li>
                             <li><a href="{{route('services')}}">Services</a></li>
-                            <li><a href="/">Works</a></li>
                             <li><a href="{{route('about')}}">About</a></li>
-                            <li><a href="blog-main.html">News</a></li>
                             <li><a href="{{route('contact')}}">Contact</a></li>
                         </ul>
                     </div>
