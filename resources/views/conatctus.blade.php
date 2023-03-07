@@ -90,7 +90,7 @@
     </div>
 </div>
 
-<div class="b-contact-social-net bg-grey text-center">
+{{-- <div class="text-center b-contact-social-net bg-grey">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -134,5 +134,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection

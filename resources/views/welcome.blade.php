@@ -1,9 +1,12 @@
 @extends('layouts.main')
 @section('content')
 
+@if (count($collectionslider)>0)
 <div id="main-slider" data-slider-width="100%" data-slider-height="950px" data-slider-arrows="true" data-slider-buttons="false" class="main-slider main-slider_mod-a slider-pro">
     <div class="sp-slides">
-        <div class="sp-slide"><img src="assets/media/components/b-main-slider/bg-2.jpg" alt="slider" class="sp-image"/>
+        @foreach ($collectionslider as $slider)
+        <div class="sp-slide">
+            <img src="assets/media/components/b-main-slider/bg-2.jpg" alt="slider" class="sp-image"/>
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
@@ -17,33 +20,11 @@
                 </div>
             </div>
         </div>
-
-        <div class="sp-slide">
-            <img src="assets/media/components/b-main-slider/bg-1.jpg" alt="slider" class="sp-image"/>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div data-width="100%" data-show-transition="right" data-hide-transition="left" data-show-duration="1200" data-show-delay="2000" data-hide-delay="400" data-vertical="190px" data-horizontal="0" class="main-slider__item-1 sp-layer">
-                            <img src="assets/media/components/b-main-slider/item-1.png" alt="Item"/>
-                        </div>
-                        <div data-width="100%" data-show-transition="left" data-hide-transition="left" data-show-duration="1200" data-show-delay="2000" data-hide-delay="400" data-vertical="250px" data-horizontal="100%" class="main-slider__item-2 sp-layer">
-                            <img src="assets/media/components/b-main-slider/item-2.png" alt="Item"/>
-                        </div>
-                        <div data-width="100%" data-show-transition="right" data-hide-transition="left" data-show-duration="1200" data-show-delay="2000" data-hide-delay="400" data-vertical="730px" data-horizontal="0" class="main-slider__item-3 sp-layer">
-                            <img src="assets/media/components/b-main-slider/item-3.png" alt="Item"/>
-                        </div>
-                        <div data-width="100%" data-show-transition="left" data-hide-transition="left" data-show-duration="2000" data-show-delay="1200" data-hide-delay="400" class="main-slider__info sp-layer">Birthday Event Management Specialists</div>
-                        <div data-width="100%" data-show-transition="left" data-hide-transition="left" data-show-duration="1200" data-show-delay="600" data-hide-delay="400" class="sp-layer">
-                            <div class="main-slider__decor bg-primary"></div>
-                        </div>
-                        <h2 data-width="100%" data-show-transition="left" data-hide-transition="left" data-show-duration="800" data-show-delay="400" data-hide-delay="400" class="main-slider__title sp-layer">celebrate your events<br>that lasts longer</h2>
-                        <div data-width="100%" data-show-transition="left" data-hide-transition="left" data-show-duration="1200" data-show-delay="2000" data-hide-delay="400" class="sp-layer"><a href="{{route('services')}}" class="main-slider__btn btn btn-primary">ask for a quote</a><a href="{{route('services')}}" class="main-slider__btn btn btn-default">read more</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
+@endif
+
 
 <div class="container">
     <div class="row">
@@ -81,12 +62,12 @@
     </div>
 </section>
 
-<div class="section-progress section-progress_mod-b">
+{{-- <div class="section-progress section-progress_mod-b">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
                 <ul class="b-progress-list b-progress-list_mod-a list-unstyled">
-                    <li class="b-progress-list__item clearfix">
+                    <li class="clearfix b-progress-list__item">
                         <div class="b-progress-list__inner">
                             <div class="b-progress-list__label"></div>
                             <span data-percent="320" class="b-progress-list__percent js-chart">
@@ -96,7 +77,7 @@
                         </div>
                         <div class="b-progress-list__icon text-primary icon-cup"></div>
                     </li>
-                    <li class="b-progress-list__item clearfix">
+                    <li class="clearfix b-progress-list__item">
                         <div class="b-progress-list__inner">
                             <div class="b-progress-list__label"></div>
                             <span data-percent="156" class="b-progress-list__percent js-chart">
@@ -106,7 +87,7 @@
                         </div>
                         <div class="b-progress-list__icon text-primary icon-user"></div>
                     </li>
-                    <li class="b-progress-list__item clearfix">
+                    <li class="clearfix b-progress-list__item">
                         <div class="b-progress-list__inner">
                             <div class="b-progress-list__label"></div>
                             <span data-percent="594" class="b-progress-list__percent js-chart">
@@ -116,7 +97,7 @@
                         </div>
                         <div class="b-progress-list__icon text-primary icon-layers"></div>
                     </li>
-                    <li class="b-progress-list__item clearfix">
+                    <li class="clearfix b-progress-list__item">
                         <div class="b-progress-list__inner">
                             <div class="b-progress-list__label"></div>
                             <span data-percent="167" class="b-progress-list__percent js-chart">
@@ -130,8 +111,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
+@if (count($collectionservices)>0)
 <section class="b-services area-bg area-bg_dark area-bg_op_90 parallax">
     <div class="area-bg__inner">
         <div class="container">
@@ -203,6 +185,8 @@
         </div>
     </div>
 </section>
+@endif
+
 
 <section class="b-info-section">
     <div class="container-fluid">
@@ -284,7 +268,7 @@
                 </div>
             </div>
         </div>
-        <ul class="b-isotope-grid grid list-unstyled js-zoom-gallery">
+        <ul class="grid b-isotope-grid list-unstyled js-zoom-gallery">
             <li class="grid-sizer"></li>
             <li class="b-isotope-grid__item grid-item corporate product"><a href="assets/media/content/gallery/480x290/1.jpg" class="b-isotope-grid__inner js-zoom-gallery__item"><img src="assets/media/content/gallery/480x290/1.jpg" alt="foto"/><span class="b-isotope-grid__wrap-info"><span class="b-isotope-grid__info"><span class="b-isotope-grid__title">Kids at Party</span><span class="b-isotope-grid__categorie">Birthday Parties</span></span><i class="icon icon-magnifier-add text-primary"></i></span></a></li>
             <li class="b-isotope-grid__item grid-item corporate proposal"><a href="assets/media/content/gallery/480x290/2.jpg" class="b-isotope-grid__inner js-zoom-gallery__item"><img src="assets/media/content/gallery/480x290/2.jpg" alt="foto"/><span class="b-isotope-grid__wrap-info"><span class="b-isotope-grid__info"><span class="b-isotope-grid__title">Kids at Party</span><span class="b-isotope-grid__categorie">Birthday Parties</span></span><i class="icon icon-magnifier-add text-primary"></i></span></a></li>
@@ -301,6 +285,8 @@
         <a href="/" class="b-isotope__btn btn btn-primary">visit full gallery</a>
     </div>
 </section>
+
+@if (count($collectionevents)>0)
 <div class="section-events">
     <div class="container">
         <div class="row">
@@ -321,7 +307,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <div data-min480="1" data-min768="3" data-min992="4" data-min1200="4" data-pagination="false" data-navigation="false" data-auto-play="4000" data-stop-on-hover="true" class="owl-carousel owl-theme enable-owl-carousel">
-                    <section class="b-events-2 text-center">
+                    <section class="text-center b-events-2">
                         <div class="b-events-2__media">
                             <img src="assets/media/components/b-events/262x390_1.jpg" alt="foto" class="img-responsive"/>
                             <div class="b-events-calendar">
@@ -349,7 +335,7 @@
                         <h3 class="b-events-2__title">Dance Event</h3>
                         <div class="b-events__details"><i class="icon icon-map"></i> 32-B, Envato St, Hill Ave, CA</div>
                     </section>
-                    <section class="b-events-2 text-center">
+                    <section class="text-center b-events-2">
                         <div class="b-events-2__media">
                             <img src="assets/media/components/b-events/262x390_2.jpg" alt="foto" class="img-responsive"/>
                             <div class="b-events-calendar">
@@ -377,7 +363,7 @@
                         <h3 class="b-events-2__title">SEO Seminar 2016</h3>
                         <div class="b-events__details"><i class="icon icon-map"></i> 32-B, Envato St, Hill Ave, CA</div>
                     </section>
-                    <section class="b-events-2 text-center">
+                    <section class="text-center b-events-2">
                         <div class="b-events-2__media">
                             <img src="assets/media/components/b-events/262x390_3.jpg" alt="foto" class="img-responsive"/>
                             <div class="b-events-calendar">
@@ -406,7 +392,7 @@
                         <h3 class="b-events-2__title">TomWed Event</h3>
                         <div class="b-events__details"><i class="icon icon-map"></i> 32-B, Envato St, Hill Ave, CA</div>
                     </section>
-                    <section class="b-events-2 text-center">
+                    <section class="text-center b-events-2">
                         <div class="b-events-2__media">
                             <img src="assets/media/components/b-events/262x390_4.jpg" alt="foto" class="img-responsive"/>
                             <div class="b-events-calendar">
@@ -439,8 +425,10 @@
         </div>
     </div>
 </div>
+@endif
 
-<section class="section-team area-bg area-bg_dark parallax">
+@if (count($collectionteam)>0)
+    <section class="section-team area-bg area-bg_dark parallax">
     <div class="area-bg__inner">
         <div class="container">
             <div class="row">
@@ -593,8 +581,10 @@
         </div>
     </div>
 </section>
+@endif
 
-<div data-stellar-background-ratio="0.4" class="section-brands bg-grey section-texture-2 stellar">
+
+{{-- <div data-stellar-background-ratio="0.4" class="section-brands bg-grey section-texture-2 stellar">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -624,5 +614,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection

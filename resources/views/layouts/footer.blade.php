@@ -13,27 +13,6 @@
             </div>
 
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <form class="footer-form">
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <h3 class="footer-form__title">Get the FREE Newsletter</h3>
-                                <div class="footer-form__info">Sign up to get the updates about new events</div>
-                            </div>
-                            <div class="col-sm-7">
-                                <div class="form-group">
-                                    <input type="email" placeholder="Your email address ..." class="footer-form__input"/>
-                                    <button class="footer-form__btn form-control-feedback">
-                                        <i class="icon icon-envelope-open text-primary_h"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="row">
                 <div class="col-md-3">
                     <div class="footer-section">
                         <h3 class="footer-section__title ui-title-inner">
@@ -74,7 +53,7 @@
                         <h3 class="footer-section__title ui-title-inner">
                             <i class="ui-decor-2 bg-primary"></i> Events Gallery
                         </h3>
-                        <ul class="footer-gallery list-unstyled js-zoom-gallery clearfix">
+                        <ul class="clearfix footer-gallery list-unstyled js-zoom-gallery">
                             <li class="footer-gallery__item">
                                 <a href="assets/media/components/footer/gallery-1.jpg" class="footer-gallery__link js-zoom-gallery__item">
                                     <img src="assets/media/components/footer/gallery-1.jpg" alt="foto" class="img-responsive"/>

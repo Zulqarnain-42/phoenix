@@ -3,17 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Slider;
+use App\Models\Services;
+use App\Models\UpcomingEvents;
+use App\Models\Team;
 
 class HomeController extends Controller
 {
     public function home()
     {
-        return view('welcome');
+        $collectionslider = Slider::Where([['status',true]])->get();
+        $collectionservices = Services::where([['status',true]])->get();
+        $collectionevents = UpcomingEvents::Where([['status',true]])->get();
+        $collectionteam = Team::Where([['status',true]])->get();
+        return view('welcome')->with(compact('collectionslider','collectionservices','collectionevents','collectionteam'));
     }
 
     public function about()
     {
-        return view('aboutus');
+        $collectionteam = Team::Where([['status',true]])->take(4)->get();
+        return view('aboutus')->with(compact('collectionteam'));
     }
 
     public function contact()
@@ -23,7 +32,9 @@ class HomeController extends Controller
 
     public function services()
     {
-        return view('services');
+        $collectionservices = Services::where([['status',true]])->get();
+        $collectionevents = UpcomingEvents::Where([['status',true]])->get();
+        return view('services')->with(compact('collectionservices','collectionevents'));
     }
 
     public function terms()

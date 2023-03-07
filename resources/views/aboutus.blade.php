@@ -36,7 +36,7 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <section class="b-post-sm b-post-sm-1 b-post-sm-1_align_center clearfix">
+                <section class="clearfix b-post-sm b-post-sm-1 b-post-sm-1_align_center">
                     <div class="entry-media">
                         <a href="assets/media/content/posts/322x180/5.jpg" class="js-zoom-images">
                             <img src="assets/media/content/posts/322x180/5.jpg" alt="Foto" class="img-responsive"/>
@@ -57,7 +57,7 @@
             </div>
 
             <div class="col-sm-4">
-                <section class="b-post-sm b-post-sm-1 b-post-sm-1_align_center clearfix">
+                <section class="clearfix b-post-sm b-post-sm-1 b-post-sm-1_align_center">
                     <div class="entry-media">
                         <a href="assets/media/content/posts/322x180/6.jpg" class="js-zoom-images">
                             <img src="assets/media/content/posts/322x180/6.jpg" alt="Foto" class="img-responsive"/>
@@ -79,7 +79,7 @@
             </div>
 
             <div class="col-sm-4">
-                <section class="b-post-sm b-post-sm-1 b-post-sm-1_align_center clearfix">
+                <section class="clearfix b-post-sm b-post-sm-1 b-post-sm-1_align_center">
                     <div class="entry-media">
                         <a href="assets/media/content/posts/322x180/7.jpg" class="js-zoom-images">
                             <img src="assets/media/content/posts/322x180/7.jpg" alt="Foto" class="img-responsive"/>
@@ -142,9 +142,9 @@
     </div>
 </div>
 
-<div class="section-progress section-progress_mod-a area-bg bg-primary_a parallax">
+{{-- <div class="section-progress section-progress_mod-a area-bg bg-primary_a parallax">
     <div class="area-bg__inner">
-        <ul class="b-progress-list b-progress-list_no-icon list-unstyled clearfix">
+        <ul class="clearfix b-progress-list b-progress-list_no-icon list-unstyled">
             <li class="b-progress-list__item">
                 <div class="b-progress-list__label"></div>
                 <span data-percent="320" class="b-progress-list__percent js-chart">
@@ -176,9 +176,9 @@
             </li>
         </ul>
     </div>
-</div>
+</div> --}}
 
-
+@if (count($collectionteam)>0)
 <section class="section-team">
     <div class="container">
         <div class="row">
@@ -332,6 +332,8 @@
         </div>
     </div>
 </section>
+@endif
+
 
 <section data-stellar-background-ratio="0.4" class="section-type-3 bg-grey section-texture-2 stellar">
     <div class="container">

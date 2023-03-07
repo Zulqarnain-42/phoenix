@@ -239,7 +239,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <div data-min480="1" data-min768="3" data-min992="4" data-min1200="4" data-pagination="false" data-navigation="false" data-auto-play="4000" data-stop-on-hover="true" class="owl-carousel owl-theme enable-owl-carousel">
-                    <section class="b-events-2 text-center">
+                    <section class="text-center b-events-2">
                         <div class="b-events-2__media">
                             <img src="assets/media/components/b-events/262x390_1.jpg" alt="foto" class="img-responsive"/>
                             <div class="b-events-calendar">
@@ -267,7 +267,7 @@
                         <h3 class="b-events-2__title">Dance Event</h3>
                         <div class="b-events__details"><i class="icon icon-map"></i> 32-B, Envato St, Hill Ave, CA</div>
                     </section>
-                    <section class="b-events-2 text-center">
+                    <section class="text-center b-events-2">
                         <div class="b-events-2__media">
                             <img src="assets/media/components/b-events/262x390_2.jpg" alt="foto" class="img-responsive"/>
                             <div class="b-events-calendar">
@@ -295,7 +295,7 @@
                         <h3 class="b-events-2__title">SEO Seminar 2016</h3>
                         <div class="b-events__details"><i class="icon icon-map"></i> 32-B, Envato St, Hill Ave, CA</div>
                     </section>
-                    <section class="b-events-2 text-center">
+                    <section class="text-center b-events-2">
                         <div class="b-events-2__media">
                             <img src="assets/media/components/b-events/262x390_3.jpg" alt="foto" class="img-responsive"/>
                             <div class="b-events-calendar">
@@ -324,7 +324,7 @@
                         <div class="b-events__details"><i class="icon icon-map"></i> 32-B, Envato St, Hill Ave, CA</div>
                     </section>
 
-                    <section class="b-events-2 text-center">
+                    <section class="text-center b-events-2">
                         <div class="b-events-2__media">
                             <img src="assets/media/components/b-events/262x390_4.jpg" alt="foto" class="img-responsive"/>
                             <div class="b-events-calendar">
@@ -392,7 +392,7 @@
     </div>
 </div>
 
-<div class="section-brands-2">
+{{-- <div class="section-brands-2">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -422,5 +422,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
